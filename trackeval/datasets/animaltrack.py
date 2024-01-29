@@ -198,7 +198,7 @@ class AnimalTrack(_BaseDataset):
             time_key = str(t+1)
             if time_key in read_data.keys():
                 try:
-                    time_data = np.asarray(read_data[time_key], dtype=np.float)
+                    time_data = np.asarray(read_data[time_key], dtype=np.float32)
                 except ValueError:
                     if is_gt:
                         raise TrackEvalException(
